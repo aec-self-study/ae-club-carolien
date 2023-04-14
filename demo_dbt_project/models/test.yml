@@ -2,11 +2,28 @@ version: 2
  
 models:
   - name: customers
-    description: Cleaned up data for our customers
+    description: Cleaned up data for our customers. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     columns:
       - name: customer_id
         description: Primary key of the model
         tests:
           - unique
           - not_null
-
+      - name: name
+        description: Name of the customer
+      - name: email
+        description: Email adress of the customer
+      - name: first_order_at
+        description: Date indication of when the first order was made.
+      - name: nr_of_orders
+        description: Nr. of orders since first purchase
+  - name: monthly_customers
+    description: Overview of nr. of new customers per month. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    columns:
+      - name: signup_month
+        description: Month in which the customers have first bought something at the coffee shop.
+        tests:
+          - unique
+          - not_null
+      - name: new customers
+        description: Nr. of new customers of the coffeeshop.
