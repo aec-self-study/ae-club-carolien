@@ -1,0 +1,22 @@
+version: 2
+ 
+sources:
+  - name: coffee_shop
+    project: analytics-engineers-club
+    description: Source with fake data for a certain coffee shop.
+    tables:
+      - name: customers
+        description: Table with customer information
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+ 
+      - name: orders
+        description: Table with order information
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
